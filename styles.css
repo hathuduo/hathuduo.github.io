@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: Lato, serif;
+    font-family: 'Lato', sans-serif;
     height: 100vh;
     overflow: hidden;
     margin: 0;
@@ -66,8 +66,7 @@ input[type="submit"] {
 .nav-bar ul li{
     list-style-type: none;
     margin: 7px;
-    font-weight: normal;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .nav-bar ul {
@@ -95,7 +94,7 @@ input[type="submit"] {
 a {
     text-decoration: none;
     color: #212121;
-    font-size: 0.8rem;
+    font-weight: normal;
 }
 
 .banner{
