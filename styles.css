@@ -71,8 +71,8 @@ input[type="submit"] {
 
 .nav-bar ul {
     display: flex;
+    width: 98%;
     justify-content: flex-end;
-    margin-right: 20px;
 }
 
 .blue {
