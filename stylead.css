@@ -2,6 +2,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --row-size1: 40px;
+    --row-size2: 25px;
+    --rowgap1: 10px;
+    --rowgap2: 5px;
+    --key-column1: 10% 30% 25%;
+    --key-column2: ; 
+    --keynum-column1: 10% 13% 3% 13% 25%;
+    --keynum-column2:
+    --label-size1:
+    --label-size2:
+}
+
 body {
     font-family: 'Lato', sans-serif;
     height: 100vh;
@@ -82,23 +95,24 @@ span {
 
 .key {
     display: grid;
-    grid-template-columns: 10% 30% 25%;
-    grid-auto-rows: 30px;
-    grid-column-gap: 10px;
+    grid-template-columns: var(--key-column1);
+    grid-auto-rows: var(--row-size1);
+    grid-column-gap: var(--rowgap1);
     margin-top: 10px;
 }
 
 .keynum {
     display: grid;
-    grid-template-columns: 10% 13% 3% 13% 25%;
-    grid-auto-rows: 30px;
-    grid-column-gap: 10px;
+    grid-template-columns: var(--keynum-column1);
+    grid-auto-rows: var(--row-size1);
+    grid-column-gap: var(--rowgap1);
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
 .key label, .keynum label {
     grid-column: 1;
+    font-size: medium;
 }
 
 .key input, .key select, #number {
@@ -164,4 +178,35 @@ span {
     grid-column: 2;
     font-size: 1rem;
     font-weight: bold;
+}
+
+@media screen and (max-width: 1499px) {
+    .key, .keynum {
+        grid-auto-rows: var(--row-size2);
+        grid-column-gap: var(--rowgap2);
+    }
+    .key span, .keynum span, .title span {
+        display: none;
+    }
+    .key {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .keynum {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .keynum label[for="tonum"] {
+        align-self: flex-start;
+    }
+
+    .key label, .keynum label {
+        font-size: small;
+    }
+    .navlink {
+        font-size: medium;
+    }
+
 }
