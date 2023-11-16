@@ -10,15 +10,14 @@
     --key-column1: 10% 30% 25%;
     --key-column2: ; 
     --keynum-column1: 10% 13% 3% 13% 25%;
-    --keynum-column2:
-    --label-size1:
-    --label-size2:
+    --keynum-column2: 
 }
 
 body {
     font-family: 'Lato', sans-serif;
     height: 100vh;
-    overflow: hidden;
+    width: 100vw;
+    overflow: auto;
     margin: 0;
     padding: 10px 20px 0 40px;
     align-self: center;
@@ -53,7 +52,7 @@ hr {padding: 0;}
 
 .navlink {
     display: flex;
-    width: 30%;
+    width: 20%;
     justify-content: space-between;
 }
 
@@ -209,8 +208,27 @@ span {
     .key label, .keynum label {
         font-size: small;
     }
-    .navlink {
-        font-size: medium;
+    .navlink a {
+        font-size: 0.8rem;
     }
 
+    input, select {
+        width: 50%;
+        margin-top: 5px;
+    }
+
+    .key input[type="submit"] {
+        width: 30%;
+        font-size: small;
+    }
 }
+
+@media screen and (max-width: 450px) {
+    .key input[type="submit"] {
+        width: 50%;
+    }
+
+    .title {
+        margin-bottom: 20px;
+    }
+} 
