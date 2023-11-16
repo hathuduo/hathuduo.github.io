@@ -181,6 +181,10 @@ span {
 }
 
 @media screen and (max-width: 1499px) {
+    body {
+        overflow: scroll;
+    }
+
     .key, .keynum {
         grid-auto-rows: var(--row-size2);
         grid-column-gap: var(--rowgap2);
